@@ -1,0 +1,63 @@
+[
+  {
+    "name": "idle",
+    "boneTransforms": {}
+  },
+  {
+    "name": "guard",
+    "boneTransforms": {
+      "upperArm-left": { "rotation": -60 },
+      "forearm-left": { "rotation": -90 },
+      "upperArm-right": { "rotation": -60 },
+      "forearm-right": { "rotation": -90 }
+    }
+  },
+  {
+    "name": "punch_extend_left",
+    "boneTransforms": {
+      "upperArm-left": { "rotation": -90 },
+      "forearm-left": { "rotation": 0 },
+      "upperArm-right": { "rotation": -45 },
+      "forearm-right": { "rotation": -90 },
+      "torso": { "rotation": 10 }
+    }
+  },
+  {
+    "name": "punch_extend_right",
+    "boneTransforms": {
+      "upperArm-right": { "rotation": -90 },
+      "forearm-right": { "rotation": 0 },
+      "upperArm-left": { "rotation": -45 },
+      "forearm-left": { "rotation": -90 },
+      "torso": { "rotation": -10 }
+    }
+  },
+  {
+    "name": "block_high",
+    "boneTransforms": {
+      "upperArm-left": { "rotation": -120 },
+      "forearm-left": { "rotation": -45 },
+      "upperArm-right": { "rotation": -120 },
+      "forearm-right": { "rotation": -45 }
+    }
+  },
+  {
+    "name": "block_low",
+    "boneTransforms": {
+      "upperArm-left": { "rotation": -30 },
+      "forearm-left": { "rotation": -60 },
+      "upperArm-right": { "rotation": -30 },
+      "forearm-right": { "rotation": -60 }
+    }
+  },
+  {
+    "name": "stagger_back",
+    "boneTransforms": {
+      "spine": { "rotation": 25, "x": -15 },
+      "torso": { "rotation": 15 },
+      "neck": { "rotation": 10 },
+      "upperArm-left": { "rotation": 30 },
+      "upperArm-right": { "rotation": 30 }
+    }
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sequence",
+  "description": "A choreographed fight sequence composed of beats",
+  "type": "object",
+  "required": ["figures", "beats"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Optional name for this sequence"
+    },
+    "figures": {
+      "type": "array",
+      "description": "Names of figures participating in this sequence",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "beats": {
+      "type": "array",
+      "description": "Ordered list of interaction moments",
+      "items": {
+        "type": "object",
+        "required": ["time", "actor", "action"],
+        "properties": {
+          "time": {
+            "type": "number",
+            "description": "Start time in seconds",
+            "minimum": 0
+          },
+          "actor": {
+            "type": "string",
+            "description": "Name of the figure performing this action"
+          },
+          "action": {
+            "type": "string",
+            "description": "Name of the action to perform"
+          },
+          "target": {
+            "type": "string",
+            "description": "Optional target figure (for attacks/blocks)"
+          }
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "name": "sample_exchange",
+      "figures": ["fighter_a", "fighter_b"],
+      "beats": [
+        { "time": 0, "actor": "fighter_a", "action": "jab", "target": "fighter_b" },
+        { "time": 0.15, "actor": "fighter_b", "action": "block_high" },
+        { "time": 0.4, "actor": "fighter_b", "action": "counter_hook", "target": "fighter_a" },
+        { "time": 0.6, "actor": "fighter_a", "action": "stagger_back" }
+      ]
+    }
+  ]
+}
